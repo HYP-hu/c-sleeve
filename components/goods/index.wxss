@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20rpx 0 0 20rpx;
+}
+.title{
+    margin-bottom: 30rpx;
+    font-size: 28rpx;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx 20rpx 40rpx 20rpx;
+}
+.title-container{
+    padding-left: 20rpx;
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    width: 160rpx;
+}
+
+.active-class{
+    background-color: #157658;
+}
+
+.discount-price,.stock{
+    margin-left: 20rpx;
+}
+
+.stock-active{
+    color: red;
+}
+
+.stock{
+    font-size: 24rpx;
+}
+
+.desc{
+    padding-top: 20rpx;
+    font-size: 28rpx;
+}

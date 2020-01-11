@@ -1,0 +1,43 @@
+.container{
+    height: 60rpx;
+    border: 2rpx solid #333;
+    padding: 2rpx;
+    box-sizing: border-box;
+}
+
+.inner-container{
+    height: 100%;
+    
+    padding-left: 15rpx;
+    padding-right: 15rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #fff;
+    font-size: 24rpx;
+}
+
+.forbidden{
+    border: 2rpx dashed #bbb;
+    color: #bbb
+}
+
+.s-outer{
+    border: 2rpx solid #157658;
+    color: #fff
+}
+
+.s-inner{
+  background-color: #157658;
+}
+
+.selected{
+    
+}
+
+.img{
+    display: flex;
+    width: 44rpx;
+    height: 44rpx;
+    margin-right: 10rpx;
+}

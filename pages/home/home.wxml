@@ -1,0 +1,28 @@
+<l-loadmore l-class="load-more" show type="{{loadingType}}" end-text="- HU作品 -">
+    <view slot="content" class="container">
+        <image class="top-theme" src="{{themeA.entrance_img}}" mode="widthFix"></image>
+        <swiper class="swiper"
+                indicator-dots
+                autoplay
+                indicator-active-color="#157658" circular>
+            <block wx:for="{{bannerB.items}}" wx:key="{{index}}">
+                <swiper-item>
+                    <image class="swiper" src="{{item.img}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
+        <s-category-grid grid="{{grid}}"></s-category-grid>
+        <image class="activityD" src="{{activityD.entrance_img}}" mode="widthFix"></image>
+        <block wx:if="themeE.online">
+            <s-spu-scroll theme="{{themeE}}" spu-list="{{themeESpu}}"></s-spu-scroll>
+        </block>
+        <image src="{{themeF.entrance_img}}" mode="widthFix" class="quality"></image>
+        <s-hot-list banner="{{bannerG}}"></s-hot-list>
+        <image mode="widthFix" class="fashion" src="{{themeH.entrance_img}}"></image>
+        <view class="spu-bottom">
+            <image class="title-spu-bottom" mode="widthFix" src="/imgs/home/title@interest.png"></image>
+            <l-water-flow id="water-flow" generic:l-water-flow-item="s-spu-preview" ></l-water-flow>
+        </view>
+    </view>
+</l-loadmore>
+

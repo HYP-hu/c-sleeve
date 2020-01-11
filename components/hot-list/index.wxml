@@ -1,0 +1,18 @@
+<view class="container">
+    <view hover-class="rect-hover" hover-stay-time="200">
+        <image class="title" src="{{banner.img}}" mode="widthFix"></image>
+    </view>
+    <view class="inner-container">
+        <view hover-class="rect-hover" hover-stay-time="200">
+            <image class="left" src="{{left.img}}"></image>
+        </view>
+        <view class="right-container">
+            <view hover-class="rect-hover" hover-stay-time="200">
+                <image class="right-size" src="{{rightTop.img}}"></image>
+            </view>
+            <view hover-class="rect-hover" hover-stay-time="200">
+                <image class="right-size" src="{{rightBottom.img}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

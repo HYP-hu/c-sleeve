@@ -1,0 +1,17 @@
+function mainPrice(price, discountPrice){
+  return discountPrice || price
+}
+
+function slashedPrice(price, discountPrice) {
+  return  discountPrice? price: null
+}
+
+function mainStock(stock){
+  return stock >= 10? '库存:  ' + stock + '件': '仅剩:  ' + stock + '件'
+}
+
+module.exports = {
+  mainPrice: mainPrice,
+  slashedPrice: slashedPrice,
+  mainStock: mainStock
+}

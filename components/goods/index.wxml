@@ -1,0 +1,43 @@
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
+<view class="container">
+    <view class="content-container">
+        <image class="img" mode="widthFix" src="{{goods.img}}"></image>
+        <view class="title-container">
+            <view class="title">{{goods.title}}</view>
+            <view>
+                <l-price color="#157658"
+                         value-size="28"
+                         unit-size="20"
+                         autofix
+                         value="{{p.mainPrice(goods.price, goods.discount_price)}}">
+                </l-price>
+                <block wx:if="{{!goods.discount_price? false: true}}">
+                    <l-price color="#999999"
+                             size="26"
+                             deleted
+                             l-class="discount-price"
+                             value="{{p.slashedPrice(goods.price, goods.discount_price)}}">
+                    </l-price>
+                </block>
+                <text class="stock {{goods.stock < 10? 'stock-active': ''}}">{{p.mainStock(goods.stock)}}</text>
+                <view class="desc">{{goods.desc}}</view>
+            </view>
+        </view>
+    </view>
+
+    <block wx:for-item="type" wx:for-index="typeIndex" wx:for="{{goods.types}}" wx:key="{{index}}">
+        <view>
+            <view>{{type.value}}</view>
+            <block wx:for="{{type.items}}" wx:for-item="goods" wx:key="{{index}}">
+                <button size="mini"
+                        bind:tap="onBtnClick"
+                        data-item="{{goods}}"
+                        data-index="{{index}}"
+                        data-type="{{type}}"
+                        data-typeIndex="{{typeIndex}}"
+                        class="{{goods.selectable? '.active-class': ''}}"
+                        disabled="{{goods.disabled}}">{{goods.value}}</button>
+            </block>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,51 @@
+
+.top-theme {
+    width: 100%;
+    /* height: 260rpx; */
+    /*vertical-align: middle;*/
+    vertical-align:bottom;
+    /*display: flex;*/
+}
+
+.swiper {
+    width: 100%;
+    height: 360rpx;
+}
+
+.activityD {
+    width: 100%;
+    /*height: 310rpx;*/
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    /*display: flex; */
+    vertical-align:bottom;
+}
+.quality{
+    width: 100%;
+    margin-top: 20rpx;
+    vertical-align:bottom;
+    margin-bottom: 20rpx;
+}
+
+.fashion{
+    display: flex;
+    width: 100%;
+    margin-top: 20rpx;
+}
+.spu-bottom{
+    margin-top: 20rpx;
+    padding-top: 30rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.title-spu-bottom{
+    width: 100%;
+    margin-bottom: 38rpx;
+}
+
+.load-more{
+    background-color: #fff !important;
+}

@@ -1,0 +1,63 @@
+<wxs src="../../wxs/price.wxs" module="p"></wxs>
+<view class="container">
+    <scroll-view class="sku-container" scroll-y>
+        <view class="inner-container">
+            <view class="sku-preview">
+                <image src="{{previewImg}}" class="sku-img"></image>
+                <view class="sku-description">
+                    <text class="title">{{title}}</text>
+                    <view>
+                        <view class="price-row">
+                            <l-price value="{{p.mainPrice(price, discountPrice)}}"
+                                     value-size="28"
+                                     autofix
+                                     color="#157658">
+                            </l-price>
+                            <block wx:if="{{!discountPrice? false: true}}">
+                                <l-price value="{{p.slashedPrice(price, discountPrice)}}"
+                                         deleted
+                                         color="#999999"
+                                         value-size="26"
+                                         autofix
+                                         class="discount-price">
+                                </l-price>
+                            </block>
+                            <view wx:if="{{stock && stock >= 10}}" class="stock">库存: {{stock}} 件</view>
+                            <view wx:if="{{stock && stock < 10 && stock > 0}}" class="stock-pinch">仅剩: {{stock}}件</view>
+                        </view>
+                        <view class="sku-pending" wx:if="{{!noSpec}}">
+                            <block wx:if="{{!skuIntact}}">
+                                <text>请选择:</text>
+                                <text>{{missingKeys}}</text>
+                            </block>
+                            <block wx:else>
+                                <text>已选:</text>
+                                <text>{{currentValues}}</text>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="hr"></view>
+            <block wx:for="{{fences}}" wx:key="{{index}}">
+                <s-fence x="{{index}}" bind:celltap="onCellTap" fence="{{item}}"/>
+            </block>
+            <view class="counter-container">
+                <text>购买数量</text>
+                <s-counter bind:lintap="onSelectCount"></s-counter>
+            </view>
+
+        </view>
+    </scroll-view>
+
+
+    <view wx:if="{{!outStock}}" class="bottom-btn">
+        <text wx:if="{{orderWay==='cart'}}">加入购物车</text>
+        <text wx:else>立即购买</text>
+    </view>
+
+    <view wx:else class="bottom-btn  out-stock">
+        <text>暂时缺货</text>
+    </view>
+</view>
+

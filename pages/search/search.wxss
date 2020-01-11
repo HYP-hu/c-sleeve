@@ -1,0 +1,79 @@
+page {
+    background-color: #fff;
+}
+
+.input {
+    border-radius: 0 !important;
+}
+
+.header {
+    background-color: #fff;
+    border-bottom: 1px soild #f3f3f3;
+    padding-bottom: 14rpx;
+    position: fixed;
+    z-index: 77;
+    width: 750rpx;
+    top: 0;
+}
+
+.inner-container {
+    padding-top: 70rpx;
+}
+
+.hot-container,.history-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.hot-title,.history-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 38rpx;
+}
+
+.slide {
+    width: 8rpx;
+    height: 46rpx;
+    background-color: #157658;
+    margin-right: 22rpx;
+}
+
+.icon {
+    margin-right: 30rpx;
+}
+
+.hot-title > text:first-of-type,.history-title > text:first-of-type {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.tag {
+    background-color: #f3f3f3 !important;
+    color: #666 !important;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+.hot-tags,.history-tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 30rpx;
+    box-sizing: border-box;
+    padding-top: 20rpx;
+}
+
+.tag-selected{
+    background-color: #DCEBE6 !important;
+    color: #157658 !important;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}
+
+
+
+
+
